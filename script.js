@@ -16,15 +16,6 @@ function findLongestWord(inputText) {
       largestWord = vowelComparison(strippedWord, largestWord);
     }
   }
-  // words.foreach((item) => {
-  //   item.replace(/[^A-Za-z]/g, '');
-  //   if (item.length > largestWordCharacterCount) {
-  //     largestWord = item;
-  //     largestWordCharacterCount = item.length;
-  //   } else if (item.length === largestWordCharacterCount) {
-  //     largestWord = vowelComparison(item, largestWord);
-  //   }
-  // });
 
   return largestWord;
 }
@@ -44,16 +35,6 @@ function vowelComparison(word1, word2) {
       word2VowelCount++;
     }
   }
-  // word1.foreach((letter) => {
-  //   if (vowels.includes(letter)) {
-  //     word1VowelCount++;
-  //   }
-  // });
-  // word2.foreach((letter) => {
-  //   if (vowels.includes(letter)) {
-  //     word2VowelCount++;
-  //   }
-  // });
 
   if (word1VowelCount >= word2VowelCount) {
     return word1;
@@ -61,5 +42,3 @@ function vowelComparison(word1, word2) {
     return word2;
   }
 }
-
-console.log(findLongestWord(inputTest));
