@@ -1,14 +1,9 @@
-const inputTest =
-  '“Smart people learn from everything and everyone, average people from their experience, stupid people already, have all the answers” (Socrates)';
-
 function findLongestWord(inputText) {
   let largestWord = '';
-  let largestWordCharacterCount = 0;
 
   const words = inputText.split(' ');
   for (let i = 0; i < words.length; i++) {
     const strippedWord = words[i].replace(/[^A-Za-z]/g, '');
-    console.log(strippedWord, strippedWord.length);
     if (strippedWord.length > largestWordCharacterCount) {
       largestWord = strippedWord;
       largestWordCharacterCount = strippedWord.length;
